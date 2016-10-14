@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WardrobeModelStoreContainer" CdmEntityContainer="WardrobeEntities">
+    <EntitySetMapping Name="Accessories">
+      <EntityTypeMapping TypeName="WardrobeModel.Accessory">
+        <MappingFragment StoreEntitySet="Accessories">
+          <ScalarProperty Name="AccessoryID" ColumnName="AccessoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="PrimaryColor" ColumnName="PrimaryColor" />
+          <ScalarProperty Name="SecondaryColor" ColumnName="SecondaryColor" />
+          <ScalarProperty Name="Pattern" ColumnName="Pattern" />
+          <ScalarProperty Name="Season" ColumnName="Season" />
+          <ScalarProperty Name="Occasion" ColumnName="Occasion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bottoms">
+      <EntityTypeMapping TypeName="WardrobeModel.Bottom">
+        <MappingFragment StoreEntitySet="Bottoms">
+          <ScalarProperty Name="BottomID" ColumnName="BottomID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="PrimaryColor" ColumnName="PrimaryColor" />
+          <ScalarProperty Name="SecondaryColor" ColumnName="SecondaryColor" />
+          <ScalarProperty Name="Pattern" ColumnName="Pattern" />
+          <ScalarProperty Name="Season" ColumnName="Season" />
+          <ScalarProperty Name="Occasion" ColumnName="Occasion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Outfits">
+      <EntityTypeMapping TypeName="WardrobeModel.Outfit">
+        <MappingFragment StoreEntitySet="Outfits">
+          <ScalarProperty Name="OutfitID" ColumnName="OutfitID" />
+          <ScalarProperty Name="TopID" ColumnName="TopID" />
+          <ScalarProperty Name="BottomID" ColumnName="BottomID" />
+          <ScalarProperty Name="ShoeID" ColumnName="ShoeID" />
+          <ScalarProperty Name="AccessoryID" ColumnName="AccessoryID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Occassion" ColumnName="Occassion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shoes">
+      <EntityTypeMapping TypeName="WardrobeModel.Sho">
+        <MappingFragment StoreEntitySet="Shoes">
+          <ScalarProperty Name="ShoeID" ColumnName="ShoeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="PrimaryColor" ColumnName="PrimaryColor" />
+          <ScalarProperty Name="SecondaryColor" ColumnName="SecondaryColor" />
+          <ScalarProperty Name="Season" ColumnName="Season" />
+          <ScalarProperty Name="Occasion" ColumnName="Occasion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="WardrobeModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tops">
+      <EntityTypeMapping TypeName="WardrobeModel.Top">
+        <MappingFragment StoreEntitySet="Tops">
+          <ScalarProperty Name="TopID" ColumnName="TopID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Sleave" ColumnName="Sleave" />
+          <ScalarProperty Name="Neckline" ColumnName="Neckline" />
+          <ScalarProperty Name="PrimaryColor" ColumnName="PrimaryColor" />
+          <ScalarProperty Name="SecondaryColor" ColumnName="SecondaryColor" />
+          <ScalarProperty Name="Pattern" ColumnName="Pattern" />
+          <ScalarProperty Name="Season" ColumnName="Season" />
+          <ScalarProperty Name="Occasion" ColumnName="Occasion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

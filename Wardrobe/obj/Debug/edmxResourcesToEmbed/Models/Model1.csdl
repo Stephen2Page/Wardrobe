@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WardrobeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Accessory">
+    <Key>
+      <PropertyRef Name="AccessoryID" />
+    </Key>
+    <Property Name="AccessoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Style" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PrimaryColor" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SecondaryColor" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Pattern" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Season" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Occasion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Outfits" Relationship="Self.FK_Outfits_Accessories" FromRole="Accessories" ToRole="Outfits" />
+  </EntityType>
+  <EntityType Name="Bottom">
+    <Key>
+      <PropertyRef Name="BottomID" />
+    </Key>
+    <Property Name="BottomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Style" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Length" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PrimaryColor" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SecondaryColor" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Pattern" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Season" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Occasion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Outfits" Relationship="Self.FK_Outfits_Bottoms" FromRole="Bottoms" ToRole="Outfits" />
+  </EntityType>
+  <EntityType Name="Outfit">
+    <Key>
+      <PropertyRef Name="OutfitID" />
+    </Key>
+    <Property Name="OutfitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TopID" Type="Int32" Nullable="false" />
+    <Property Name="BottomID" Type="Int32" Nullable="false" />
+    <Property Name="ShoeID" Type="Int32" Nullable="false" />
+    <Property Name="AccessoryID" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Occassion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Accessory" Relationship="Self.FK_Outfits_Accessories" FromRole="Outfits" ToRole="Accessories" />
+    <NavigationProperty Name="Bottom" Relationship="Self.FK_Outfits_Bottoms" FromRole="Outfits" ToRole="Bottoms" />
+    <NavigationProperty Name="Sho" Relationship="Self.FK_Outfits_Shoes" FromRole="Outfits" ToRole="Shoes" />
+    <NavigationProperty Name="Top" Relationship="Self.FK_Outfits_Tops" FromRole="Outfits" ToRole="Tops" />
+  </EntityType>
+  <EntityType Name="Sho">
+    <Key>
+      <PropertyRef Name="ShoeID" />
+    </Key>
+    <Property Name="ShoeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Style" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="PrimaryColor" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SecondaryColor" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Season" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Occasion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Outfits" Relationship="Self.FK_Outfits_Shoes" FromRole="Shoes" ToRole="Outfits" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Top">
+    <Key>
+      <PropertyRef Name="TopID" />
+    </Key>
+    <Property Name="TopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Sleave" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Neckline" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PrimaryColor" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SecondaryColor" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Pattern" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Season" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Occasion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Outfits" Relationship="Self.FK_Outfits_Tops" FromRole="Tops" ToRole="Outfits" />
+  </EntityType>
+  <Association Name="FK_Outfits_Accessories">
+    <End Role="Accessories" Type="Self.Accessory" Multiplicity="0..1" />
+    <End Role="Outfits" Type="Self.Outfit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accessories">
+        <PropertyRef Name="AccessoryID" />
+      </Principal>
+      <Dependent Role="Outfits">
+        <PropertyRef Name="AccessoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Outfits_Bottoms">
+    <End Role="Bottoms" Type="Self.Bottom" Multiplicity="1" />
+    <End Role="Outfits" Type="Self.Outfit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bottoms">
+        <PropertyRef Name="BottomID" />
+      </Principal>
+      <Dependent Role="Outfits">
+        <PropertyRef Name="BottomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Outfits_Shoes">
+    <End Role="Shoes" Type="Self.Sho" Multiplicity="1" />
+    <End Role="Outfits" Type="Self.Outfit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shoes">
+        <PropertyRef Name="ShoeID" />
+      </Principal>
+      <Dependent Role="Outfits">
+        <PropertyRef Name="ShoeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Outfits_Tops">
+    <End Role="Tops" Type="Self.Top" Multiplicity="1" />
+    <End Role="Outfits" Type="Self.Outfit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tops">
+        <PropertyRef Name="TopID" />
+      </Principal>
+      <Dependent Role="Outfits">
+        <PropertyRef Name="TopID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WardrobeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accessories" EntityType="Self.Accessory" />
+    <EntitySet Name="Bottoms" EntityType="Self.Bottom" />
+    <EntitySet Name="Outfits" EntityType="Self.Outfit" />
+    <EntitySet Name="Shoes" EntityType="Self.Sho" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Tops" EntityType="Self.Top" />
+    <AssociationSet Name="FK_Outfits_Accessories" Association="Self.FK_Outfits_Accessories">
+      <End Role="Accessories" EntitySet="Accessories" />
+      <End Role="Outfits" EntitySet="Outfits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Outfits_Bottoms" Association="Self.FK_Outfits_Bottoms">
+      <End Role="Bottoms" EntitySet="Bottoms" />
+      <End Role="Outfits" EntitySet="Outfits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Outfits_Shoes" Association="Self.FK_Outfits_Shoes">
+      <End Role="Shoes" EntitySet="Shoes" />
+      <End Role="Outfits" EntitySet="Outfits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Outfits_Tops" Association="Self.FK_Outfits_Tops">
+      <End Role="Tops" EntitySet="Tops" />
+      <End Role="Outfits" EntitySet="Outfits" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
