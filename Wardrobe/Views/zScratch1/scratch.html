@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    @Html.DropDownListFor(x => Model.Type, new SelectListItem[]
+    {
+    new SelectListItem() {Text = "Top", Value="Top"},
+    new SelectListItem() {Text = "Bottom", Value="Bottom"},
+    new SelectListItem() {Text = "Shoe", Value="Shoe"},
+    new SelectListItem() {Text = "Accessory", Value="Accessory"}})
+    })
+</body>
+</html>

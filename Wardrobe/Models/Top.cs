@@ -11,7 +11,8 @@ namespace Wardrobe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Top
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,12 +22,15 @@ namespace Wardrobe.Models
         }
     
         public int TopID { get; set; }
+        [Display(Name = "Description")]
         public string Name { get; set; }
         public string Photo { get; set; }
         public string Type { get; set; }
         public string Sleave { get; set; }
         public string Neckline { get; set; }
+        [Display(Name = "Primary Color")]
         public string PrimaryColor { get; set; }
+        [Display(Name = "Secondary Color")]
         public string SecondaryColor { get; set; }
         public string Pattern { get; set; }
         public string Season { get; set; }
