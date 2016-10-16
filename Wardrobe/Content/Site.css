@@ -22,11 +22,25 @@ select,
 textarea {
     max-width: 280px;
 }
+.img-responsive detail {
+    max-height: 200px;
+    max-width: 200px;
+}
+.img-responsive index {
+    max-height: 200px;
+    max-width: 200px;
+}
 dt {
     font-weight: normal;
+    max-width: 120px;
 }
 dd {
     font-weight: bold;
+}
+@media (min-width: 768px) {
+    .dl-horizontal dd {
+        margin-left: 135px; 
+    }
 }
 .form-group {
     margin-bottom: 5px;

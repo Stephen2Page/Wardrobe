@@ -205,7 +205,25 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\boot.jpg" />
+    <Content Include="Content\images\bow-tie.jpg" />
+    <Content Include="Content\images\chinos.jpg" />
     <Content Include="Content\images\flannel.jpg" />
+    <Content Include="Content\images\gloves.jpg" />
+    <Content Include="Content\images\jeans.jpg" />
+    <Content Include="Content\images\kilt.jpg" />
+    <Content Include="Content\images\knit-cap.jpg" />
+    <Content Include="Content\images\loafers.jpg" />
+    <Content Include="Content\images\madras.jpg" />
+    <Content Include="Content\images\mocs.jpg" />
+    <Content Include="Content\images\polo-windowpane.jpg" />
+    <Content Include="Content\images\sandals.jpg" />
+    <Content Include="Content\images\scarf.jpg" />
+    <Content Include="Content\images\shorts.jpg" />
+    <Content Include="Content\images\strip-tie.jpg" />
+    <Content Include="Content\images\t-shirt-long.jpg" />
+    <Content Include="Content\images\t-shirt.jpg" />
+    <Content Include="Content\images\tweed-cap.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

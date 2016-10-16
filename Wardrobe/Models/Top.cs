@@ -31,7 +31,8 @@ namespace Wardrobe.Models
         public string Neckline { get; set; }
         [Display(Name = "Primary Color")]
         public string PrimaryColor { get; set; }
-        [Display(Name = "Secondary Color")]
+        [Display(Name = "Second Color")]
+        [DisplayFormat(NullDisplayText = "-", ApplyFormatInEditMode = true)]
         public string SecondaryColor { get; set; }
         public string Pattern { get; set; }
         public string Season { get; set; }

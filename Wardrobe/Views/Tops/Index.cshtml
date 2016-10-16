@@ -9,8 +9,27 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-2">
+                    <div class="thumbnail">
+                        <img src="@Url.Content(@item.Photo)" class="img-responsive" alt="No Image">
+                        <div class="caption">
+                            <h4 class="text-nowrap">@Html.DisplayFor(modelItem => item.Name)</h4>
+                            <p>...</p>
+                            <p>@Html.ActionLink("Details", "Details", new { id = item.TopID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
+                        </div>
+                    </div>
+
+        </div>
+        }
+    </div>
+</div>
+
 <table class="table">
-    <tr>
+    @*<tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -39,10 +58,10 @@
             @Html.DisplayNameFor(model => model.Occasion)
         </th>
         <th></th>
-    </tr>
+    </tr>*@
 
 @foreach (var item in Model) {
-    <tr>
+    @*<tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
@@ -75,7 +94,7 @@
             @Html.ActionLink("Details", "Details", new { id=item.TopID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.TopID })
         </td>
-    </tr>
+    </tr>*@
 }
 
 </table>
