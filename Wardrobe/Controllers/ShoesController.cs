@@ -46,10 +46,11 @@ namespace Wardrobe.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ShoeID,Name,Photo,Type,Style,PrimaryColor,SecondaryColor,Season,Occasion")] Sho shoe)
+        public ActionResult Create([Bind(Include = "ShoeID,Name,Photo,Style,PrimaryColor,SecondaryColor,Season,Occasion")] Sho shoe)
         {
             if (ModelState.IsValid)
             {
+                shoe.Type = "Shoe";
                 db.Shoes.Add(shoe);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -78,10 +79,11 @@ namespace Wardrobe.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ShoeID,Name,Photo,Type,Style,PrimaryColor,SecondaryColor,Season,Occasion")] Sho shoe)
+        public ActionResult Edit([Bind(Include = "ShoeID,Name,Photo,Style,PrimaryColor,SecondaryColor,Season,Occasion")] Sho shoe)
         {
             if (ModelState.IsValid)
             {
+                shoe.Type = "Shoe";
                 db.Entry(shoe).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
