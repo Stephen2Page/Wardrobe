@@ -26,6 +26,7 @@ namespace Wardrobe.Models
         public string Name { get; set; }
         public string Photo { get; set; }
         public string Type { get; set; }
+        [Display(Name = "Sleeve")]
         public string Sleave { get; set; }
         public string Neckline { get; set; }
         [Display(Name = "Primary Color")]

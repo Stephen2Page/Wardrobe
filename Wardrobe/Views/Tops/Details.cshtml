@@ -1,11 +1,11 @@
 ﻿@model Wardrobe.Models.Top
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Top Details";
 }
 
-<h2>Details</h2>
-
+<h2>@ViewBag.Title</h2>
+<hr />
 <div>
     <h4>
         @Html.DisplayNameFor(model => model.Name)
@@ -14,30 +14,14 @@
         @Html.DisplayFor(model => model.Name)
     </h3>
 
-    <hr />
-
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                @*<dt>
-                @Html.DisplayNameFor(model => model.Photo)
-            </dt>*@
-
-                <img src="@Url.Content(Model.Photo)" style="height:200px; width:200px" />
-                @* "../images/flannel.jpg" *@
-
+                <img src="@Url.Content(@Model.Photo)" alt ="No Image" style="height:200px; width:200px" />
             </div>
             <div class="col-sm-3">
                 <dl class="dl-horizontal">
                     
-                    @*<dt>
-                        @Html.DisplayNameFor(model => model.Type)
-                    </dt>
-
-                    <dd>
-                        @Html.DisplayFor(model => model.Type)
-                    </dd>*@
-
                     <dt>
                         @Html.DisplayNameFor(model => model.Sleave)
                     </dt>
