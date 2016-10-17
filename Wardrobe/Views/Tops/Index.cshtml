@@ -6,11 +6,6 @@
 }
 @RenderPage("~/Views/Shared/_IndexHeader.cshtml")
 
-@*<h2>@ViewBag.Title</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
 <div class="container">
     <div class="row">
         @foreach (var item in Model)
@@ -20,7 +15,6 @@
                     <img src="@Url.Content(@item.Photo)" class="img-responsive" alt="No Image">
                     <div class="caption">
                         <h4 class="text-nowrap">@Html.DisplayFor(modelItem => item.Name)</h4>
-                        <p>...</p>
                         <p>@Html.ActionLink("Details", "Details", new { id = item.TopID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
                     </div>
                 </div>

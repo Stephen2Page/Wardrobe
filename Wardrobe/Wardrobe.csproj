@@ -308,6 +308,7 @@
     <Content Include="Views\Shared\_DetailFooter.cshtml" />
     <Content Include="Views\Shared\_EditHeader.cshtml" />
     <Content Include="Views\Shared\_IndexHeader.cshtml" />
+    <Content Include="Views\Shared\_DeleteHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

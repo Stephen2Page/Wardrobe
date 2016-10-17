@@ -1,90 +1,79 @@
 ﻿@model Wardrobe.Models.Accessory
 
 @{
-    ViewBag.Title = "Details";
-}
+    ViewBag.Title = "Accessory Details";
+    PageData["Title"] = ViewBag;
+    PageData["Name"] = (Model.Name);
+    PageData["ID"] = (Model.AccessoryID);
 
-<h2>Details</h2>
+}
+@RenderPage("~/Views/Shared/_DetailHeader.cshtml")
 
 <div>
-    <h4>Accessory</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="@Url.Content(@Model.Photo)" class="img-responsive detail" alt="No Image" />
+            </div>
+            <div class="col-sm-4">
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+                <dl class="dl-horizontal">
+                     <dt>
+                        @Html.DisplayNameFor(model => model.Type)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Type)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Photo)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Style)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Style)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Type)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PrimaryColor)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Style)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.PrimaryColor)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Style)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.SecondaryColor)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PrimaryColor)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.SecondaryColor)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PrimaryColor)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Pattern)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SecondaryColor)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Pattern)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.SecondaryColor)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Season)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Pattern)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Season)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Pattern)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Occasion)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Season)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Occasion)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Season)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occasion)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoryID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                </dl>
+            </div>
+            @RenderPage("~/Views/Shared/_DetailFooter.cshtml")

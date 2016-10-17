@@ -2,23 +2,13 @@
 
 @{
     ViewBag.Title = "Top Details";
-    PageData["Title"] = "Top Details";
+    PageData["Title"] = ViewBag.Title;
     PageData["Name"] = (Model.Name);
     PageData["ID"] = (Model.TopID);
-
 }
 @RenderPage("~/Views/Shared/_DetailHeader.cshtml")
 
-
-@*<h2>@ViewBag.Title</h2>
-<hr />*@
 <div>
-    @*<h4>
-        @Html.DisplayNameFor(model => model.Name)
-    </h4>
-    <h3>
-        @Html.DisplayFor(model => model.Name)
-    </h3>*@
 
     <div class="container">
         <div class="row">
@@ -85,17 +75,10 @@
                     <dd>
                         @Html.DisplayFor(model => model.Occasion)
                     </dd>
-
                 </dl>
             </div>
-
         </div>
     </div>
 </div>
 @RenderPage("~/Views/Shared/_DetailFooter.cshtml")
 
-@*<hr/>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@
