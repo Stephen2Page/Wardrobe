@@ -11,7 +11,8 @@ namespace Wardrobe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Sho
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,7 +26,9 @@ namespace Wardrobe.Models
         public string Photo { get; set; }
         public string Type { get; set; }
         public string Style { get; set; }
+        [Display(Name = "Primary Color")]
         public string PrimaryColor { get; set; }
+        [Display(Name = "Second Color")]
         public string SecondaryColor { get; set; }
         public string Season { get; set; }
         public string Occasion { get; set; }

@@ -39,6 +39,9 @@ select,
 textarea {
     max-width: 280px;
 }
+.form-control {
+    background-color: #DFDFDF;
+}
 .col-sm-2 {
     padding: 5px;
 }
