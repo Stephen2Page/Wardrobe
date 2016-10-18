@@ -9,8 +9,9 @@ Week 6 Project
 6. Outfits index is a list of outfits created. 
 7. Outfits Details page show grid of four clothing pieces and links to details for each piece.
 8. Used shared layout views to standardize views of Index, Details, Edit and Delete pages. 
-
+9. added dropdowns to home screen.
+10. tried to ad divide into main drop\down but does not show.
 
 ISSUES:
-1. could not added accessories due to error EntityValidationErrors in controller. 
+1. could not added accessories due to error EntityValidationErrors in controller.
 2. could not create outfits without accessories even though it was nullable.
