@@ -8,58 +8,57 @@
 }
 @RenderPage("~/Views/Shared/_DetailHeader.cshtml")
 
-
 <div>
-    <h4>@Html.DisplayNameFor(model => model.Occassion)</h4>
-    @Html.DisplayFor(model => model.Occassion)
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-6 col-sm-4">
-                <div class="thumbnail">
-                    <img src="@Url.Content(@Model.Top.Photo)" class="img-responsive" alt="No Image">
-                    <div class="caption">
-                        <h4 class="text-nowrap">@Html.DisplayFor(modelItem => Model.Top.Name)</h4>
-                        <p>@Html.ActionLink("Details", "../Tops/Details", new { id = Model.Top.TopID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-xs-6 col-sm-4">
-                @Html.DisplayNameFor(model => model.Accessory.Name)
-                @Html.DisplayFor(model => model.Accessory.Name)
-                @*<div class="thumbnail">
-                    <img src="@Url.Content(@Model.Accessory.Photo)" class="img-responsive" alt="No Image">
-                    <div class="caption">
-                        <h4 class="text-nowrap">@Html.DisplayFor(modelItem => Model.Accessory.Name)</h4>
-                        <p>@Html.ActionLink("Details", "../Accessories/Details", new { id = Model.Accessory.AccessoryID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
-                    </div>
-                </div>*@
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 col-sm-4">
-                <div class="thumbnail">
-                    <img src="@Url.Content(@Model.Bottom.Photo)" class="img-responsive" alt="No Image">
-                    <div class="caption">
-                        <h4 class="text-nowrap">@Html.DisplayFor(modelItem => Model.Bottom.Name)</h4>
-                        <p>@Html.ActionLink("Details", "../Bottoms/Details", new { id = Model.Bottom.BottomID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-xs-6 col-sm-4">
-                <div class="thumbnail">
-                    <img src="@Url.Content(@Model.Sho.Photo)" class="img-responsive" alt="No Image">
-                    <div class="caption">
-                        <h4 class="text-nowrap">@Html.DisplayFor(modelItem => Model.Sho.Name)</h4>
-                        <p>@Html.ActionLink("Details", "../Shoes/Details", new { id = Model.Sho.ShoeID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <h4>@Html.DisplayNameFor(model => model.Occassion):  <b>@Html.DisplayFor(model => model.Occassion)</b></h4>
+    <br />
     </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="thumbnail">
+                            <img src="@Url.Content(@Model.Top.Photo)" class="img-responsive" alt="No Image">
+                            <div class="caption">
+                                <h4 class="text-nowrap">@Html.DisplayFor(modelItem => Model.Top.Name)</h4>
+                                <p>@Html.ActionLink("Details", "../Tops/Details", new { id = Model.Top.TopID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
+                            </div>
+                        </div>
 
-</div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4">
+                        Accessory Placeholder
+                        @*<div class="thumbnail">
+                            <img src="@Url.Content(@Model.Accessory.Photo)" class="img-responsive" alt="No Image">
+                            <div class="caption">
+                                <h4 class="text-nowrap">@Html.DisplayFor(modelItem => Model.Accessory.Name)</h4>
+                                <p>@Html.ActionLink("Details", "../Accessories/Details", new { id = Model.Accessory.AccessoryID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
+                            </div>
+                        </div>*@
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="thumbnail">
+                            <img src="@Url.Content(@Model.Bottom.Photo)" class="img-responsive" alt="No Image">
+                            <div class="caption">
+                                <h4 class="text-nowrap">@Html.DisplayFor(modelItem => Model.Bottom.Name)</h4>
+                                <p>@Html.ActionLink("Details", "../Bottoms/Details", new { id = Model.Bottom.BottomID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="thumbnail">
+                            <img src="@Url.Content(@Model.Sho.Photo)" class="img-responsive" alt="No Image">
+                            <div class="caption">
+                                <h4 class="text-nowrap">@Html.DisplayFor(modelItem => Model.Sho.Name)</h4>
+                                <p>@Html.ActionLink("Details", "../Shoes/Details", new { id = Model.Sho.ShoeID }, new { @class = "btn btn-primary btn-sm float:right" })</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
 @RenderPage("~/Views/Shared/_DetailFooter.cshtml")

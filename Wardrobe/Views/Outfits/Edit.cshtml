@@ -2,10 +2,9 @@
 
 @{
     ViewBag.Title = "Edit";
+    PageData["Title"] = ViewBag.Title;
 }
-
-<h2>Edit</h2>
-
+@RenderPage("~/Views/Shared/_EditHeader.cshtml")
 
 @using (Html.BeginForm())
 {

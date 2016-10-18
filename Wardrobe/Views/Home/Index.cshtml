@@ -19,17 +19,37 @@
     <div class="col-md-4">
         <h2>Add new Clothing</h2>
         <p>Add your new clothing to your wardrobe.</p>
-        <p><a class="btn btn-default" href="/Tops/Create">Tops &raquo;</a></p>
-        <p><a class="btn btn-default" href="/Bottoms/Create">Bottoms &raquo;</a></p>
-        <p><a class="btn btn-default" href="/Shoes/Create">Shoes &raquo;</a></p>
-        <p><a class="btn btn-default" href="/Accessories/Create">Accessories &raquo;</a></p>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Add Clothing
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="/Tops/Create">Tops</a></li>
+                <li><a href="/Bottoms/Create">Bottoms</a></li>
+                <li><a href="/Shoes/Create">Shoes</a></li>
+                <li><a href="/Accessories/Create">Accessories</a></li>
+            </ul>
+        </div>
     </div>
     <div class="col-md-4">
         <h2>View Clothing</h2>
         <p>View and manage your clothing.</p>
-        <p><a class="btn btn-default" href="/Tops/Index">Tops &raquo;</a></p>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                View Clothing
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="/Tops/Index">Tops</a></li>
+                <li><a href="/Bottoms/Index">Bottoms</a></li>
+                <li><a href="/Shoes/Index">Shoes</a></li>
+                <li><a href="/Accessories/Index">Accessories</a></li>
+            </ul>
+        </div>
+        @*<p><a class="btn btn-default" href="/Tops/Index">Tops &raquo;</a></p>
         <p><a class="btn btn-default" href="/Bottoms/Index">Bottoms &raquo;</a></p>
         <p><a class="btn btn-default" href="/Shoes/Index">Shoes &raquo;</a></p>
-        <p><a class="btn btn-default" href="/Accessories/Index">Accessories &raquo;</a></p>
+        <p><a class="btn btn-default" href="/Accessories/Index">Accessories &raquo;</a></p>*@
     </div>
 </div>
