@@ -25,9 +25,15 @@
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #efefef;
 }
-.divider {
-    height: 6px;
-    color: white;
+.divider-collapsed {
+   hidden-xs;
+   margin-top: 14px
+}
+.divider-open {
+    hidden-sm;
+    hidden-md;
+    hidden-lg;
+
 }
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
